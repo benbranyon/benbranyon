@@ -29,8 +29,20 @@ if ( ! function_exists( 'suffice_child_enqueue_child_styles' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'GutenbergStarterChild_enqueue_child_styles' );
 
-function landspeedr_add_google_fonts() {
-	wp_enqueue_style( 'landsspeedr-google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap', false );
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
+
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'main' !== $handle ) {
+        return $tag;
+    }
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;
 }
 
-add_action( 'wp_enqueue_scripts', 'landspeedr_add_google_fonts' );
+function benbranyon_add_google_fonts() {
+	wp_enqueue_style( 'benbranyon-google-fonts', 'https://fonts.googleapis.com/css2?family=Oi&display=swap', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'benbranyon_add_google_fonts' );

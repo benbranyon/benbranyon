@@ -18,7 +18,7 @@ body {
 }
 
 .header-bg {
-  background-color: #0a0a0a;
+  background-color: transparent;
 }
 
 .site-header {
@@ -26,10 +26,11 @@ body {
 }
 
 .site-title {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 26px;
+  color: #000;
+  font-family: 'Oi', cursive;
+  text-transform: capitalize;
+  font-size: 40px;
+  text-shadow: 2px 3px 1px #fff;
 }
 
 .home .entry-title {
@@ -52,234 +53,7 @@ p {
 
 #scene-container {
   height: 800px;
+  position: absolute;
+  top: 0;
   width: 100%;
-}
-
-#scene-container canvas {
-  background-image: url('/wp-content/themes/GutenbergStarterChild/assets/images/space-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-/** AOS **/
-
-.page-template-page-architecture-of-surveillance-landing #page .hentry {
-  background: url('/wp-content/themes/GutenbergStarterChild/assets/images/loading.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-.page-template-page-architecture-of-surveillance .main-inner,
-.page-template-page-architecture-of-surveillance-landing .main-inner {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.page-template-page-architecture-of-surveillance .container-inner .main,
-.page-template-page-architecture-of-surveillance-landing .container-inner .main {
-  background-color: transparent!important;
-  padding-top: 40px;
-}
-
-.page-template-page-architecture-of-surveillance .container-inner > .main::before,
-.page-template-page-architecture-of-surveillance .container-inner > .main::after,
-.page-template-page-architecture-of-surveillance-landing .container-inner > .main::before,
-.page-template-page-architecture-of-surveillance-landing .container-inner > .main::after {
-  display: none;
-}
-
-.page-template-page-architecture-of-surveillance .container-inner .main h1 {
-  color: #fff;
-  text-align: center;
-}
-
-.aos-page-title {
-  font-size: 36px;
-  line-height: 1;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.aos-intro-image {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.aos-infographic__info {
-  color: #fff;
-  padding: 20px;
-  width: 90%;
-}
-
-@media only screen and (min-width: 600px) {
-  .aos-infographic__info {
-    width: 35%;
-  }
-}
-
-.aos-infographic__text {
-  display: none;
-}
-
-.aos-infographic__title {
-  font-size:24px;
-  margin-bottom:20px;
-}
-
-.aos-infographic__display {
-  text-shadow: 2px 2px 4px #000000;
-}
-
-@media only screen and (min-width: 600px) {
-  .aos-infographic__display {
-    min-height: 572px;
-  }
-}
-
-.aos-list {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.aos-infographic__nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.m-hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.m-fadeIn {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s linear 0s, opacity 300ms;
-}
-
-.aos-infographic_intro .button {
-  background-color: #9FACBD;
-  border: 1px solid #F1F1E6;
-  border-radius: 30px;
-  color: #333;
-  display: block;
-  height: 35px;
-  padding: 12px;
-  text-align: center;
-  width: 35px;
-}
-
-.aos-infographic_intro .button:hover {
-  background-color: #EDFBFF;
-}
-
-.aos-infographic_intro .button img {
-  height: 35px;
-  width: 35px;
-}
-
-#infographicPrev {
-  transform: rotate(180deg);
-  margin-right:20px;
-}
-
-.aos-infographic__info h2 {
-  color: #fff;
-}
-
-.aos-infographic {
-  align-items: center;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.aos-landing {
-  padding: 20px;
-}
-
-.aos-landing__description {
-  color: white;
-  font-size: 20px;
-  max-width: 680px;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
-  margin: 0 auto;
-}
-
-.aos-landing-title {
-  max-width: 680px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-.aos-landing-subtitle {
-  color: #fff;
-  font-size: 30px;
-  margin-bottom: 1em;
-  text-shadow: 2px 2px 4px #000000;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.aos-landing__nav {
-  font-size: 20px;
-  justify-content: center;
-}
-
-.aos-landing__nav .button {
-  background-color: transparent;
-  border: 5px solid #000;
-  color: #000;
-  font-weight: bold;
-  display: block;
-  padding: 25px;
-  text-align: center;
-  margin:40px;
-}
-
-.aos-landing__nav .button:hover {
-  background-color: #EDFBFF;
-}
-
-@media only screen and (min-width: 600px) {
-  .aos-infographic {
-    flex-direction: row;
-  }
-
-  .aos-landing__nav {
-    display: flex;
-  }
-}
-
-.aos-infographic__animation {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  .aos-infographic__animation {
-    width: 65%;
-  }
-}
-
-.video-consainer {
-  display: none;
-}
-
-#videoCanvas {
-  box-shadow: 0 -19px 21px 2px #2d465e;
-  margin: 0px;
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  #videoCanva {
-    margin: 20px;
-  }
 }
