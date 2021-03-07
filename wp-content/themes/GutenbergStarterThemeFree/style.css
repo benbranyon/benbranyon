@@ -1,0 +1,1155 @@
+/*
+Theme Name: Gutenberg Starter WordPress Theme Free
+Theme URI: https://dessign.net/gutenberg-starter-wordpress-theme-free/
+Author: Dessign Themes
+Author URI: https://dessign.net/
+Description: Gutenberg Starter WordPress Theme perfect for any project, Business, Agency, Portfolio, Personal or Commercial Fully Responsive Website.
+Version: 1.0.3
+License: GNU General Public License version v3
+License URI: http://www.gnu.org/licenses/gpl.html
+Text Domain: Gutenberg Starter
+Tags:  three-columns, right-sidebar, left-sidebar, theme-options, custom-background, custom-menu, featured-images, footer-widgets, custom-colors, custom-logo
+gutenbergtheme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Credits to: Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+::-moz-selection {
+    background-color: #000;
+    color: #fff;
+}
+ ::selection {
+    background-color: #000;
+    color: #fff;
+}
+a {
+  background-color: transparent;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2.44em;
+  margin: 0.67em 0;
+  line-height: 1.4;
+}
+h2 {
+  font-size: 1.95em;
+  line-height: 1.4;
+}
+h3 {
+  font-size: 1.56em;
+  line-height: 1.4;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.8em;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.author-credits{
+	text-align: left;
+}
+.author-credits a{
+	color: #222222;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #444;
+  font-family: initial;
+  font-size: 14px;
+  font-size: .8rem;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #32373c;
+  clear: both;
+}
+.entry-header h1.entry-title {
+  font-size: 2em;
+  line-height: 1.4;
+  margin: 1em 0;
+}
+dfn, cite, em, i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5em;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+code, kbd, tt, var {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+big {
+  font-size: 125%;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.33em;
+	font-weight: bold;
+	line-height: 1.2;
+}
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+.site-description {
+	margin: .4375em 0 0;
+	font-size: 17px;
+	font-weight: inherit;
+	line-height: 1.4;
+	word-wrap: break-word;
+	color: #929292;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+hr {
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #222 #222 #222;
+  border-radius: 3px;
+  background: #222222;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 12px;
+  font-size: 1rem;
+  line-height: 1;
+  height: 2.6rem;
+  padding: 0 2em;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 2.6rem;
+  padding: 0 .6em;
+	width:100%;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+select {
+  border: 1px solid #ccc;
+}
+textarea {
+  height: auto;
+  padding: .6em;
+  width: 100%;
+}
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: #222;
+}
+a:visited {
+  color: #333;
+}
+a:hover, a:focus, a:active {
+  color: #000000;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+}
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+  text-transform: uppercase;
+}
+.main-navigation li {
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	line-height: 2.3;
+}
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  border-bottom: 1px solid #111;
+	margin: 0 auto 60px;
+  max-width: 740px;
+	overflow: hidden;
+  padding-bottom: 60px;
+	display:none;
+}
+.nav-links {
+	display: flex;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	width: 50%;
+	flex: 1 0 50%;
+	display:none;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+  outline: 0;
+}
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft,
+.alignright {
+	max-width: 740px !important;	/* Let's work to make this !important unnecessary */
+}
+.alignleft img,
+.alignright img,
+.alignleft figcaption,
+.alignright figcaption {
+	max-width: 50%;
+	width: 50%;
+}
+.alignleft figcaption {
+	clear: left;
+}
+.alignright figcaption {
+	clear: right;
+}
+.alignleft img,
+.alignleft figcaption {
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright img,
+.alignright figcaption {
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget-area {
+	width: 25%;
+}
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+#page {
+  margin: 0 auto;
+  max-width: 100%;
+}
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+.hentry {
+  margin: 60px 0;
+}
+.updated:not(.published) {
+  display: none;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+.entry-header,
+.page-header,
+.entry-footer,
+.site-info,
+.post-navigation,
+.page-navigation,
+.comments-area,
+.not-found .page-content,
+.search .entry-summary {
+  margin: 1.5em auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  max-width: 740px;
+}
+.entry-header .wp-post-image {
+  margin-bottom: 1.5em;
+}
+.entry-footer span{
+  margin-right: 1em;
+}
+.entry-footer{
+  color: #aaa;
+  font-size: 90%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999;
+	display:none;
+	
+}
+@media screen and (min-width: 664px) {
+  .entry-header,
+  .page-header,
+  .entry-footer,
+  .site-info,
+  .post-navigation,
+  .page-navigation,
+  .comments-area,
+  .not-found .page-content,
+  .search .entry-summary {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+.bypostauthor {
+  display: block;
+}
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending{
+  display: block;
+}
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+.wp-caption-text {
+  text-align: center;
+}
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+  max-width: 33.3333333333%;
+}
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+  max-width: 16.6666666667%;
+}
+.gallery-columns-7 .gallery-item {
+  max-width: 14.2857142857%;
+}
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+  max-width: 11.1111111111%;
+}
+.gallery-caption {
+  display: block;
+}
+.site-header{
+  color: #222;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+body.fixed-header .site-header{
+  position: fixed;
+}
+body.absolute-header .site-main > .hentry,
+body.absolute-header .site-main .entry-content,
+body.absolute-header .site-main .entry-content > *{
+  margin-top: 0;
+}
+.header-bg{
+  background: #FFF;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  z-index: 1; 
+}
+.header-inner{
+  margin: 0 auto;
+  padding: 25px 15px;
+  position: relative;
+  width: 94%;
+  z-index: 2;
+}
+.site-branding{
+  position: relative;
+}
+.site-header a,
+.site-header a:visited{
+  color: inherit;
+}
+.site-header a:hover{
+  opacity: 0.8;
+}
+.toggle-menu{
+  display: block;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 15px;
+  width: 28px;
+  z-index: 10;
+}
+#primary-menu-triger{
+  display: none;
+}
+#secondary-menu-triger{
+  display: block;
+}
+.toggle-menu span:after,
+.toggle-menu span:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+.toggle-menu span:after{
+  top: 9px;
+}
+.toggle-menu span{
+  position: relative;
+  display: block;
+  top: 9px;
+}
+.toggle-menu span,
+.toggle-menu span:after,
+.toggle-menu span:before{
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.secondary-menu-block{
+  background: rgba(0,0,0,0.9);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  z-index: 999;
+}
+.close-menu{
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  line-height: 1;
+  padding: 10px 15px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.secondary-menu-inner{
+  height: 100vh;
+  display: table;
+  width: 100%;
+}
+.secondary-menu-content{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.secondary-menu-content ul{
+  font-size: 24px;
+  list-style-type: none;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+.secondary-menu-content li{
+  padding: 25px 0 0;
+}
+.secondary-menu-content ul ul{
+  padding-left: 4em;
+}
+.secondary-menu-content a{
+  color: #fff;
+  text-decoration: none;
+}
+.secondary-menu-content a:hover{
+  text-decoration: underline;
+}
+.site-footer{
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+.site-footer a,
+.site-footer a:visited{
+  color: inherit;
+}
+.footer-inner{
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px;
+}
+.footer-top{
+  padding: 60px 0 40px;
+}
+.footer-row{
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+}
+.footer-top .footer-widget{
+  float: left;
+  padding: 0 15px;
+  width: 33.33%;
+}
+.footer-widget-title{
+  font-size: 18px;
+}
+.footer-bot{
+  padding: 15px 0;
+}
+.footer-copyright{
+  float: left;
+  padding: 0 15px;
+  width: 50%;
+}
+.footer-social{
+  float: right;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 0 15px;
+  text-align: right;
+  width: 50%;
+}
+.footer-social a{
+  display: inline-block;
+  margin: 0 3px;
+  text-decoration: none;
+}
+.footer-social a:hover{
+  opacity: 0.8;
+}
+.page-container{
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px; 
+}
+.page-row{
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden; 
+}
+.page-col{
+  float: left;
+  padding: 0 15px;
+  width: 67%;
+}
+.sidebar-col{
+  float: left;
+  padding: 0 15px;
+  width: 33%;
+}
+.sidebar-widget-wrap{
+  margin: 60px 0;
+}
+.sidebar-widget{
+  margin-bottom: 20px;
+}
+.sidebar-widget ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	font-size: .95rem;
+}
+.sidebar-widget p{
+  margin-top: 0;
+font-size: .95rem;
+	font-weight:300;
+}
+.sidebar-widget .widget-title{
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+	font-size: 1rem;
+  line-height: 2rem;
+}
+.sidebar-widget a{
+  text-decoration: none;
+}
+.search-form label{
+  vertical-align: top;
+}
+.entry-content li.wc-block-grid__product{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.entry-content li.wc-block-grid__product{
+margin: 0 0 24px;
+}
+@media screen and (max-width: 991px) {
+  .header-inner{
+    padding: 20px 15px;
+    width: 100%;
+  }
+  #primary-menu-triger{
+    display: block;
+  }
+  #secondary-menu-triger{
+    display: none;
+  }
+  #site-navigation{
+    display: none;
+    max-height: 80vh;
+    overflow: auto;
+  }
+  #primary-menu{
+    padding-top: 10px;
+  }
+  .main-navigation ul{
+    display: block;
+  }
+  .main-navigation ul ul{
+    background: transparent!important;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-branding img{
+    height: auto;
+    max-width: 200px;
+  }
+  .footer-top{
+    padding: 40px 0 15px;
+  }
+  .footer-top .footer-widget{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .footer-copyright{
+    float: none;
+    margin-top: 8px;
+    width: 100%;
+  }
+  .footer-social{
+    float: none;
+    text-align: left;
+    width: 100%;
+  }
+  .page-col{
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+  .sidebar-col{
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+  .sidebar-wrap{
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 991px) {
+  body.absolute-header{
+    padding-top: 0!important;
+  }
+  .header-inner{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-toggle{
+    display: none;
+  }
+  .main-navigation-w-secondary{
+    padding-right: 80px;
+  }
+  .main-navigation .mobile-secondary-nav{
+    display: none;
+  }
+  .main-navigation ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .main-navigation a {
+    padding: 0 .9em;
+  }
+  .main-navigation ul ul {
+    display: none;
+    background: #FFF;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99999;
+    text-align: left;
+    width: 200px;
+  }
+  .main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+  }
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    left: -100%;
+  }
+  .main-navigation ul ul a {
+    width: 200px;
+  }
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    display: block;
+    left: auto;
+  }
+}
