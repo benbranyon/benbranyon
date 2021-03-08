@@ -42,7 +42,7 @@ function add_type_attribute($tag, $handle, $src) {
 }
 
 function benbranyon_add_google_fonts() {
-	wp_enqueue_style( 'benbranyon-google-fonts', 'https://fonts.googleapis.com/css2?family=Oi&display=swap', false );
+	wp_enqueue_style( 'benbranyon-google-fonts', 'https://fonts.googleapis.com/css2?family=Russo+One&display=swap', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'benbranyon_add_google_fonts' );
